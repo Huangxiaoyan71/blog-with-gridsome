@@ -52,6 +52,25 @@
     </Layout>
 </template>
 
+<page-query>
+    query ($id: ID){
+        strapiPost (id: $id) {
+            id
+            title
+            content
+            created_at
+            cover {
+                url
+            }
+            tags {
+                id
+                title
+            }
+                    
+        }
+    }
+</page-query>
+
 <script>
 export default {
     name: "PostPage"
